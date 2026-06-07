@@ -1,0 +1,89 @@
+{
+  "name": "alert-rollup",
+  "version": "1.0.0",
+  "description": "Alert deduplication and digest engine. Send first alerts immediately, batch duplicates into scheduled digests, acknowledge to suppress temporarily.",
+  "private": false,
+  "license": "MIT",
+  "author": "RezaLabs",
+  "type": "commonjs",
+  "main": "index.js",
+  "module": "./index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "files": [
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONFIG.md",
+    "CONTRIBUTING.md",
+    "EXAMPLES.md",
+    "README.md",
+    "SECURITY.md",
+    "examples",
+    "index.d.ts",
+    "index.js",
+    "src"
+  ],
+  "scripts": {
+    "knip": "knip --production --strict",
+    "lint": "eslint .",
+    "start:example": "node examples/slack-basic.js",
+    "start:redis-example": "node examples/redis-distributed.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "globals": "^16.0.0",
+    "jest": "^30.0.0",
+    "knip": "^5.0.0",
+    "neostandard": "^0.12.0"
+  },
+  "peerDependencies": {
+    "redis": "^4.7.1"
+  },
+  "peerDependenciesMeta": {
+    "redis": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "redis": "^4.7.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "alert",
+    "batch",
+    "deduplication",
+    "digest",
+    "notification",
+    "ops",
+    "pagerduty",
+    "redis",
+    "slack",
+    "throttle"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezalabs/alert-rollup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rezalabs/alert-rollup/issues"
+  },
+  "homepage": "https://github.com/rezalabs/alert-rollup#readme",
+  "sideEffects": false,
+  "overrides": {
+    "minimatch": "^10.0.0"
+  }
+}

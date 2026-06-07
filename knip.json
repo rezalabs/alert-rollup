@@ -1,0 +1,29 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "index.js",
+    "src/AlertRollup.js",
+    "src/storage/InMemoryAdapter.js",
+    "src/storage/RedisAdapter.js",
+    "src/storage/redis-scripts.js",
+    "src/fingerprint/index.js",
+    "examples/slack-basic.js",
+    "examples/redis-distributed.js"
+  ],
+  "project": ["src/**/*.js"],
+  "ignoreDependencies": [
+    "redis"
+  ],
+  "ignoreBinaries": [],
+  "rules": {
+    "binaries": "warn",
+    "dependencies": "error",
+    "devDependencies": "error",
+    "unlisted": "error",
+    "exports": "error",
+    "files": "error",
+    "nsExports": "error",
+    "nsTypes": "error",
+    "types": "error"
+  }
+}

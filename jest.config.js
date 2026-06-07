@@ -1,0 +1,11 @@
+module.exports = {
+    testEnvironment: 'node',
+    verbose: true,
+    coveragePathIgnorePatterns: [
+        '/node_modules/',
+        '/examples/'
+    ],
+    testMatch: [
+        '**/__tests__/**/*.test.js'
+    ]
+}
